@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Магазин обоев в торговом центре «Бухта» в Москве на Дмитровском шоссе, 165к1. Информация о магазине и как нас найти.">
+<title>Магазин обоев — ТЦ «Бухта»</title>
+<style>
+:root {
+  --site-primary: #34483D;
+  --site-on-primary: #FFFFFF;
+  --site-secondary: #E7DDCC;
+  --site-on-secondary: #2F342E;
+  --site-background: #F8F6F1;
+  --site-on-background: #252923;
+  --site-font-body: Arial, Helvetica, sans-serif;
+  --site-font-heading: Georgia, "Times New Roman", serif;
+  --site-heading-scale: 1;
+  --site-spacing-scale: 1;
+  --site-radius-scale: 1;
+  --site-decoration-opacity: 1;
+  color-scheme: light dark;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: light-dark(#F8F6F1, #171A17);
+  color: light-dark(#252923, #F2F0E9);
+  font-family: var(--site-font-body);
+  line-height: 1.55;
+}
+.site-root {
+  min-height: 100vh;
+  width: 100%;
+  border-radius: 0;
+  background-color: var(--site-background);
+  color: var(--site-on-background);
+}
+a { color: inherit; }
+.wrap { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+header { padding: calc(22px * var(--site-spacing-scale)) 0; }
+.nav { display:flex; align-items:center; justify-content:space-between; gap:24px; }
+.brand { display:flex; align-items:center; gap:12px; font-weight:700; letter-spacing:.02em; }
+.brand-mark { width:40px; height:40px; display:grid; place-items:center; background:var(--site-primary); color:var(--site-on-primary); border-radius:50%; font-family:var(--site-font-heading); font-size:23px; }
+.brand small { display:block; color:#72766D; font-size:11px; font-weight:500; letter-spacing:.13em; text-transform:uppercase; }
+.nav a { text-decoration:none; font-size:14px; }
+.nav-links { display:flex; align-items:center; gap:26px; }
+.pill-link { padding:11px 17px; border:1px solid #C9C8BC; border-radius:999px; }
+.hero { padding: 34px 0 74px; }
+.hero-grid { display:grid; grid-template-columns: 1.02fr .98fr; align-items:center; gap:48px; }
+.eyebrow { color:#657467; font-size:12px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; }
+h1,h2,h3 { font-family:var(--site-font-heading); font-weight:500; line-height:1.1; }
+h1 { font-size:clamp(42px, 5.2vw, 68px); letter-spacing:-.035em; margin:18px 0 20px; }
+h1 em { color:#71836F; font-weight:400; }
+.lead { font-size:17px; max-width:480px; color:#5F6259; margin:0 0 28px; }
+.actions { display:flex; flex-wrap:wrap; gap:12px; }
+.button { display:inline-flex; justify-content:center; align-items:center; gap:8px; padding:14px 20px; border-radius:999px; text-decoration:none; font-size:14px; font-weight:700; transition:transform .18s ease, opacity .18s ease; }
+.button:hover { transform:translateY(-2px); }
+.button-primary { background:var(--site-primary); color:var(--site-on-primary); }
+.button-secondary { border:1px solid #C8C8BB; color:#343A32; }
+.hero-art { min-height:450px; position:relative; overflow:hidden; border-radius: calc(220px * var(--site-radius-scale)) calc(220px * var(--site-radius-scale)) 16px 16px; background:#E4DDCE; }
+.hero-art img { width:100%; height:100%; min-height:450px; object-fit:cover; display:block; }
+.art-note { position:absolute; bottom:20px; left:20px; right:20px; padding:15px 18px; background:rgba(248,246,241,.94); border-radius:12px; color:#283329; display:flex; justify-content:space-between; align-items:center; gap:12px; font-size:13px; }
+.art-note strong { font-family:var(--site-font-heading); font-size:20px; font-weight:500; }
+section { padding:70px 0; }
+.section-head { max-width:650px; margin-bottom:32px; }
+h2 { font-size:clamp(32px, 3.8vw, 46px); margin:12px 0 14px; letter-spacing:-.025em; }
+.section-head p { color:#66695F; margin:0; }
+.categories { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+.category { background:#EFEBE2; border-radius:16px; overflow:hidden; }
+.category img { width:100%; height:220px; object-fit:cover; display:block; }
+.category-body { padding:20px; }
+.category h3 { font-size:24px; margin:0 0 8px; }
+.category p { font-size:14px; color:#65675E; margin:0; }
+.about { background:var(--site-secondary); color:var(--site-on-secondary); }
+.about-grid { display:grid; grid-template-columns:.85fr 1.15fr; gap:60px; align-items:start; }
+.about h2 { max-width:430px; }
+.about-copy { font-size:16px; color:#55594F; }
+.features { display:grid; grid-template-columns:1fr 1fr; gap:22px; margin-top:28px; }
+.feature { border-top:1px solid #C8C3B5; padding-top:14px; }
+.feature strong { display:block; font-family:var(--site-font-heading); font-size:20px; font-weight:500; margin-bottom:5px; }
+.feature span { font-size:13px; color:#65675D; }
+.location-grid { display:grid; grid-template-columns:1fr 1fr; gap:50px; align-items:center; }
+.location-card { background:#EFEBE2; padding:28px; border-radius:18px; }
+.location-card h3 { font-size:27px; margin:0 0 20px; }
+.address-line { display:flex; gap:13px; margin:16px 0; align-items:flex-start; }
+.address-line b { display:block; font-size:14px; }
+.address-line span { display:block; color:#66695F; font-size:14px; }
+.map-placeholder { min-height:300px; border-radius:18px; background:linear-gradient(145deg,#E7E2D6,#D8DCCD); display:flex; align-items:center; justify-content:center; padding:30px; text-align:center; position:relative; overflow:hidden; }
+.map-placeholder:before,.map-placeholder:after { content:""; position:absolute; width:140%; height:2px; background:rgba(93,119,100,.22); transform:rotate(-24deg); }
+.map-placeholder:after { transform:rotate(34deg); }
+.map-pin { position:relative; z-index:1; width:60px; height:60px; display:grid; place-items:center; background:var(--site-primary); color:white; border-radius:50% 50% 50% 8px; transform:rotate(-45deg); margin:0 auto 18px; }
+.map-pin span { transform:rotate(45deg); font-size:24px; }
+.map-caption { position:relative; z-index:1; }
+.map-caption strong { display:block; font-family:var(--site-font-heading); font-size:23px; font-weight:500; }
+.map-caption span { font-size:13px; color:#5F665B; }
+footer { background:#26372D; color:#F7F4ED; padding:28px 0; }
+.footer-row { display:flex; justify-content:space-between; gap:20px; align-items:center; font-size:13px; }
+footer small { color:#C6CEC4; }
+@media (max-width:760px) {
+  .wrap { width:min(100% - 32px, 560px); }
+  .nav-links { gap:12px; }
+  .nav-links a:not(.pill-link) { display:none; }
+  .hero { padding:22px 0 48px; }
+  .hero-grid,.about-grid,.location-grid { grid-template-columns:1fr; gap:28px; }
+  .hero-art,.hero-art img { min-height:340px; }
+  .hero-art { border-radius:150px 150px 14px 14px; }
+  section { padding:52px 0; }
+  .categories { grid-template-columns:1fr; }
+  .category img { height:230px; }
+  .about-grid { gap:8px; }
+  .location-grid { gap:22px; }
+  .features { gap:16px; }
+  .footer-row { align-items:flex-start; flex-direction:column; }
+}
+</style>
+</head>
+<body>
+<div class="site-root">
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#top" aria-label="Магазин обоев — главная" style="text-decoration:none">
+        <span class="brand-mark">О</span>
+        <span>МАГАЗИН ОБОЕВ<small>ТЦ «Бухта» · Москва</small></span>
+      </a>
+      <nav class="nav-links" aria-label="Основная навигация">
+        <a href="#assortment">Ассортимент</a>
+        <a href="#about">О магазине</a>
+        <a class="pill-link" href="#contacts">Как нас найти</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Обои для вашего интерьера</div>
+          <h1>Найдите обои<br>для <em>своего дома</em></h1>
+          <p class="lead">Магазин обоев в торговом центре «Бухта» на Дмитровском шоссе в Москве. Приезжайте познакомиться с ассортиментом и выбрать подходящий вариант для вашего интерьера.</p>
+          <div class="actions">
+            <a class="button button-primary" href="#contacts">Как нас найти <span aria-hidden="true">↗</span></a>
+            <a class="button button-secondary" href="#assortment">Об ассортименте</a>
+          </div>
+        </div>
+        <div class="hero-art">
+          <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1100&q=85" alt="Светлый современный интерьер с оформленными стенами">
+          <div class="art-note"><span><strong>Идеи для интерьера</strong><br>Подберите оформление стен под свой стиль</span><span aria-hidden="true">✳</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="assortment">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Ассортимент</div>
+          <h2>Обои для разных интерьеров</h2>
+          <p>В магазине можно подобрать обои под стиль комнаты, желаемую цветовую гамму и ваш интерьер. Ниже — примеры направлений, которые помогут определиться с идеей.</p>
+        </div>
+        <div class="categories">
+          <article class="category">
+            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80" alt="Спокойный современный интерьер в нейтральных тонах" loading="lazy">
+            <div class="category-body"><h3>Спокойные оттенки</h3><p>Нейтральные цвета и лаконичные решения для уютного пространства.</p></div>
+          </article>
+          <article class="category">
+            <img src="https://images.unsplash.com/photo-1616486029423-aaa4789e8c9a?auto=format&fit=crop&w=800&q=80" alt="Интерьер с выразительными деталями и фактурами" loading="lazy">
+            <div class="category-body"><h3>Фактуры и рисунки</h3><p>Идеи для акцентной стены и индивидуального оформления комнаты.</p></div>
+          </article>
+          <article class="category">
+            <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=800&q=80" alt="Светлая гостиная с гармоничным оформлением" loading="lazy">
+            <div class="category-body"><h3>Для каждой комнаты</h3><p>Подберите оформление для гостиной, спальни, прихожей или другого помещения.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="wrap about-grid">
+        <div>
+          <div class="eyebrow">Магазин обоев</div>
+          <h2>Выбор начинается с идеи</h2>
+        </div>
+        <div class="about-copy">
+          <p>Обои помогают задать настроение интерьеру: сделать его светлым и спокойным, добавить выразительный рисунок или подчеркнуть отдельную зону комнаты.</p>
+          <p>Посетите магазин в ТЦ «Бухта», чтобы ознакомиться с доступными вариантами и выбрать обои для своего проекта.</p>
+          <div class="features">
+            <div class="feature"><strong>Разные стили</strong><span>Идеи для классических и современных интерьеров</span></div>
+            <div class="feature"><strong>Выбор на месте</strong><span>Возможность ознакомиться с ассортиментом в магазине</span></div>
+            <div class="feature"><strong>Удобное расположение</strong><span>Торговый центр «Бухта» на Дмитровском шоссе</span></div>
+            <div class="feature"><strong>Личный визит</strong><span>Посмотрите варианты перед покупкой</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacts">
+      <div class="wrap location-grid">
+        <div>
+          <div class="eyebrow">Контакты и расположение</div>
+          <h2>Ждём вас в ТЦ «Бухта»</h2>
+          <p class="lead">Приезжайте в магазин обоев в Москве — будем рады вашему визиту.</p>
+          <div class="location-card">
+            <h3>Как нас найти</h3>
+            <div class="address-line"><span aria-hidden="true">⌖</span><div><b>Адрес</b><span>Москва, Дмитровское шоссе, д. 165, корп. 1<br>ТЦ «Бухта»</span></div></div>
+            <div class="address-line"><span aria-hidden="true">◷</span><div><b>Режим работы</b><span>Уточните перед посещением</span></div></div>
+            <div class="address-line"><span aria-hidden="true">▣</span><div><b>Павильон</b><span>Уточните номер и этаж у магазина</span></div></div>
+            <div class="actions" style="margin-top:22px">
+              <a class="button button-primary" href="https://yandex.ru/maps/?text=Москва%2C%20Дмитровское%20шоссе%2C%20165%20к1%2C%20ТЦ%20Бухта" target="_blank" rel="noopener noreferrer">Маршрут на карте ↗</a>
+            </div>
+          </div>
+        </div>
+        <div class="map-placeholder" role="img" aria-label="Схематичный блок с расположением магазина">
+          <div class="map-caption">
+            <div class="map-pin"><span>⌖</span></div>
+            <strong>ТЦ «Бухта»</strong>
+            <span>Дмитровское шоссе, 165к1 · Москва</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-row">
+      <div><strong>Магазин обоев · ТЦ «Бухта»</strong><br><small>Москва, Дмитровское шоссе, д. 165, корп. 1</small></div>
+      <small>Информационная страница магазина</small>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
